@@ -1,4 +1,3 @@
-<!-- eslint-disable prettier/prettier -->
 <!-- <script setup lang="ts">
 import { RouterLink, RouterView } from "vue-router";
 import HelloWorld from "./components/HelloWorld.vue";
@@ -96,9 +95,24 @@ nav a:first-of-type {
 </style> -->
 <template>
   <div class="container">
-    <img class="logo" src="@/assets/blitz.jpg" />
+    <SignUp/>
+  
   </div>
 </template>
-<script></script>
+<script>
+import SignUp from "./components/SignUp.vue"
+export default {
+  name:'App',
+components:{
+  SignUp
+}
+}
+</script>
 
-<style></style>
+<style scoped>
+.container{
+  background: rgb(0, 0, 0);
+  align-content: center;
+}
+
+</style>
