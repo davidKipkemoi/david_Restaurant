@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "name": "David",
+      "email": "david@app.com",
+      "password": "david123",
+      "id": 1
+    },
+    {
+      "name": "David",
+      "email": "david@app.com",
+      "password": "david123",
+      "id": 2
+    },
+    {
+      "name": "rich",
+      "email": "rich@app",
+      "password": "rich987",
+      "id": 3
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "saasaa",
+      "id": 4
+    },
+    {
+      "name": "Peter",
+      "email": "peter@app",
+      "password": "peter123",
+      "id": 5
+    },
+    {
+      "name": "andrew",
+      "email": "andrew@app",
+      "password": "andrew123",
+      "id": 6
+    }
+  ]
+}
