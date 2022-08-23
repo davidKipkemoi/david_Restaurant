@@ -24,23 +24,25 @@ export default {
 
 
   },
-  methods:{
-    async Login(){
+  methods: {
+    async Login() {
       const results = await axios.get(`http://localhost:3000/users?email=${this.email}&password=${this.password}`)
-     
-      if(results.status==200 && results.data.length>0){
-        localStorage.setItem('user-details',JSON.stringify(results.data[0]))
-        this.$router.push({ name: 'Home' })      }
-        console.warn(results);
+
+      if (results.status == 200 && results.data.length > 0) {
+
+        localStorage.setItem('user-details', JSON.stringify(results.data[0]))
+        this.$router.push({ name: 'Home' })
+        alert("Thank You for Login In");
+      }
+      console.warn(results);
     }
   },
   mounted() {
-
-        const user = localStorage.getItem('user-details');
-        if (user) {
-            this.$router.push({ name: 'Home' })
-        }
+    const user = localStorage.getItem("user-details");
+    if (user) {
+      this.$router.push({ name: "Home" });
     }
+  }
 }
 </script>
 <style scoped>

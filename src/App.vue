@@ -94,13 +94,17 @@ nav a:first-of-type {
 }
 </style> -->
 <template>
+<router-view/>
   <div class="container">
     
-    <router-view/>
+
+    
   </div>
+  
 </template>
 <script>
 export default {
+  
   name:'App'
 }
 </script>
@@ -108,12 +112,10 @@ export default {
 <style scoped>
 .container{
   background: rgb(0, 0, 0);
-  display: block;
-    margin-bottom: 30px;
-    margin-right: auto;
-    margin-left: auto;
+  display: flex;
+   
 }
 #app{
-  display: flex;
+display: flex;
 }
 </style>
