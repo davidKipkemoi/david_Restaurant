@@ -8,7 +8,7 @@
         <button v-on:click="Signwhere">Sign Up</button>
     </div>
 </template>
-<script>
+<script >
 import axios from 'axios'
 export default {
     name: "SignUp",
@@ -21,7 +21,7 @@ export default {
     },
     methods: {
         async Signwhere() {
-            let results = await axios.post("http://localhost:3000/users", {
+            const results = await axios.post("http://localhost:3000/users", {
                 name: this.name,
                 email: this.email,
                 password: this.password
@@ -30,15 +30,24 @@ export default {
             if (results.status == 201) {
                 alert("Thank You for Signing Up!!")
                 localStorage.setItem("user-details", JSON.stringify(results))
-
+                this.$router.push({ name: 'Home' })
             }
         }
-    }
+    },
+    mounted(){
+
+    const user = localStorage.getItem('user-details');
+    if(user){
+        this.$router.push({name:'Home'})
+    }}
 }
 </script>
 <style scoped>
 .logo {
     display: block;
+    margin-bottom: 30px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .register input {

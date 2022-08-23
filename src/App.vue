@@ -95,8 +95,8 @@ nav a:first-of-type {
 </style> -->
 <template>
   <div class="container">
-    <SignUp/>
-  
+    
+    <router-view/>
   </div>
 </template>
 <script>
@@ -112,7 +112,15 @@ components:{
 <style scoped>
 .container{
   background: rgb(0, 0, 0);
-  align-content: center;
+  display: block;
+    margin-bottom: 30px;
+    margin-right: auto;
+    margin-left: auto;
 }
-
+#app{
+   display: block;
+    margin-bottom: 30px;
+    margin-right: auto;
+    margin-left: auto;
+}
 </style>
