@@ -55,9 +55,9 @@
       "id": 9
     },
     {
-      "name": "jane",
-      "email": "jane@app",
-      "password": "jane123",
+      "name": "bill",
+      "email": "bill@app",
+      "password": "bill123",
       "id": 10
     }
   ]

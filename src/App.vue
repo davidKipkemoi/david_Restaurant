@@ -100,12 +100,8 @@ nav a:first-of-type {
   </div>
 </template>
 <script>
-import SignUp from "./components/SignUp.vue"
 export default {
-  name:'App',
-components:{
-  SignUp
-}
+  name:'App'
 }
 </script>
 
@@ -118,9 +114,6 @@ components:{
     margin-left: auto;
 }
 #app{
-   display: block;
-    margin-bottom: 30px;
-    margin-right: auto;
-    margin-left: auto;
+  display: flex;
 }
 </style>

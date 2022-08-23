@@ -1,8 +1,8 @@
 <template>
 <div class="karibu">
-    <hi>
+    <p>
         Welcome Home David
-    </hi>
+    </p>
 
 </div>
 </template>
@@ -14,7 +14,7 @@ export default {
 
     const user = localStorage.getItem('user-details');
     if(!user){
-        this.$router.push({name:'Sign-Up'})
+         this.$router.push({ name: 'Home' })
     }}
 }
 
