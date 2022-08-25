@@ -94,11 +94,11 @@ nav a:first-of-type {
 }
 </style> -->
 <template>
-<router-view/>
   <div class="container">
     
 
-    
+    <router-view/>
+
   </div>
   
 </template>
@@ -111,11 +111,11 @@ export default {
 
 <style scoped>
 .container{
-  background: rgb(0, 0, 0);
-  display: flex;
-   
+  
 }
 #app{
-display: flex;
+    ;
+
 }
+
 </style>

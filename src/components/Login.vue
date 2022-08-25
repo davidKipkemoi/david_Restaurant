@@ -1,11 +1,12 @@
 <template>
-  <img class="logo" src="@/assets/blitz.jpg" />
-  <div class="Login">
+  
+  <div class="Loginn">
+    <img class="logo" src="@/assets/blitz.jpg" />
     <h1 class="text">Login</h1>
     <input type="text" v-model="email" placeholder="Enter Email" />
-    <input type="password" v-model="password" placeholder="Enter Password" />
+    <input type="password" required="require" v-model="password" placeholder="Enter Password" />
     <button v-on:click="Login()">Login</button>
-    <p class="Loginn">
+    <p class="Log-in">
       <router-link to="SignUp">
         Don't Have an Account?
       </router-link>
@@ -46,13 +47,21 @@ export default {
 }
 </script>
 <style scoped>
-.logo {
+
+.Loginn{
+     display: grid;
+    background-image: url("https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+ .logo {
   display: block;
   margin-right: auto;
   margin-left: auto;
 }
 
-.Login input {
+.Loginn input {
   width: 300px;
   height: 40px;
   padding-left: 20px;
@@ -63,7 +72,7 @@ export default {
   border: 1px solid slateblue;
 }
 
-.Login button {
+.Loginn button {
   width: 320px;
   height: 40px;
   border: 1px solid slateblue;
@@ -77,9 +86,24 @@ export default {
 }
 
 .text {
+   width: 320px;
+  height: 40px;
   display: block;
+  margin-bottom: 30px;
   margin-right: auto;
   margin-left: auto;
+  color: white;
 
+}
+@media (hover: hover) {
+  a:hover {
+    background-color: hsl(0, 6%, 27%);
+  }
+}
+a,
+.green {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  transition: 0.4s;
 }
 </style>

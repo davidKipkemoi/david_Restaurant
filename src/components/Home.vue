@@ -1,7 +1,6 @@
 <template>
 <div class="karibu">
-    <p>Welcome Home David</p>
-
+    
 </div>
 </template>
 <script>
@@ -18,8 +17,13 @@ export default {
 }
 
 </script>
-<style>
+<style scoped>
 .karibu{
-   display: flex;
+    
 }
+.links{
+    display: flex;
+}
+
+
 </style>

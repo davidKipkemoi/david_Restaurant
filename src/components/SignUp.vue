@@ -1,12 +1,13 @@
 <template>
-  <img class="logo" src="@/assets/blitz.jpg" />
+ 
   <div class="register">
+     <img class="logo" src="@/assets/blitz.jpg" />
     <h1 class="text">Kindly Sign up</h1>
     <input type="text" v-model="name" placeholder="Enter Name" />
     <input type="text" v-model="email" placeholder="Enter Email" />
     <input type="password" v-model="password" placeholder="Enter Password" />
     <button v-on:click="Signwhere">Sign Up</button>
-    <p class="Loginn">
+    <p class="sign-up">
       <router-link to="Login"> Already Have an Account? </router-link>
     </p>
   </div>
@@ -46,11 +47,32 @@ export default {
 };
 </script>
 <style scoped>
+@media (hover: hover) {
+  a:hover {
+    background-color: hsl(0, 6%, 27%);
+  }
+}
+a,
+.green {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  transition: 0.4s;
+}
+
 .logo {
   display: block;
   margin-right: auto;
   margin-left: auto;
 }
+.register{
+    display: grid;
+    background-image: url("https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+
 
 .register input {
   width: 300px;
@@ -79,6 +101,14 @@ export default {
 .text {
   display: block;
   margin-right: auto;
-  margin-left: 100px;
+  margin-left: auto;
+  color: white;
 }
+
+.sign-up{
+    display: grid;
+margin-right: auto;
+  margin-left: auto;
+}
+
 </style>
