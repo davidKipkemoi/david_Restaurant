@@ -7,7 +7,7 @@
       <input type="password" required="require" v-model="password" placeholder="Enter Password" />
       <button v-on:click="Login()">Login</button>
       <p class="Log-in">
-        <router-link to="SignUp">
+        <router-link to="/">
           Don't Have an Account?
         </router-link>
       </p>
@@ -16,7 +16,7 @@
   <script>
   import axios from "axios";
   export default {
-    name: "Login",
+    name: "Log-in",
     data() {
       return {
         email: "",

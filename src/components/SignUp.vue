@@ -47,17 +47,7 @@ export default {
 };
 </script>
 <style scoped>
-@media (hover: hover) {
-  a:hover {
-    background-color: hsl(0, 6%, 27%);
-  }
-}
-a,
-.green {
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-  transition: 0.4s;
-}
+
 
 .logo {
   display: block;
@@ -82,20 +72,22 @@ a,
   margin-bottom: 30px;
   margin-right: auto;
   margin-left: auto;
-  border: 1px solid slateblue;
+  border: 1px solid rgb(255, 255, 255);
 }
 
 .register button {
   width: 320px;
   height: 40px;
-  border: 1px solid slateblue;
-  background: rgb(0, 183, 255);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 3cm;
+  background: rgb(123, 201, 231);
   color: rgb(0, 0, 0);
   cursor: pointer;
   display: block;
   margin-bottom: 30px;
   margin-right: auto;
   margin-left: auto;
+  
 }
 
 .text {
@@ -109,6 +101,8 @@ a,
     display: grid;
 margin-right: auto;
   margin-left: auto;
+  color: white;  
+
 }
 
 </style>
