@@ -22,7 +22,7 @@
         email: "",
         password: ""
       }
-  
+
   
     },
     methods: {
