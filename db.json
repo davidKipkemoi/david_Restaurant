@@ -95,6 +95,12 @@
       "email": "vuex@app.com",
       "password": "vuex123",
       "id": 16
+    },
+    {
+      "name": "Test",
+      "email": "test@app.com",
+      "password": "test123",
+      "id": 17
     }
   ]
 }

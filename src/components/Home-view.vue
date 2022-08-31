@@ -12,7 +12,25 @@
     >
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
 
-      <v-toolbar-title> Blitz Kenya</v-toolbar-title>
+      <v-toolbar-title> Blitz Food</v-toolbar-title>
+        <v-spacer></v-spacer>
+          <v-btn  
+            width="1in" 
+            class="mx-4"
+            flat
+            >
+              <v-badge right color="red">
+                <span slot="badge">6</span>
+                  <v-icon>mdi-cart</v-icon> Cart
+
+              </v-badge>
+          </v-btn>
+
+          <v-btn 
+             width="1in" 
+            @click="Signout"
+            >Sign OUt</v-btn>
+        
     </v-app-bar>
 
     <v-navigation-drawer
@@ -29,20 +47,25 @@
         <v-list-item-group
           v-model="group"
           active-class="deep-purple--text text--accent-4">
-          <v-list-item >
+          <v-list-item router-link to="Home">
             <v-list-item-icon>
               <v-icon>mdi-home</v-icon>
             </v-list-item-icon>
             <v-list-item-title>Home</v-list-item-title>
           </v-list-item>
 
-          <v-list-item >
+          <v-list-item router-link to="Menu">
             <v-list-item-icon>
-              <v-icon
-              
-              >mdi-home</v-icon>
+              <v-icon>mdi-food</v-icon>
             </v-list-item-icon>
-            <v-list-item-title>Home</v-list-item-title>
+            <v-list-item-title>Menu</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item router-link to="">
+            <v-list-item-icon >
+              <v-icon >mdi-cart</v-icon>
+            </v-list-item-icon>
+            <v-list-item-title>Orders</v-list-item-title>
           </v-list-item>
 
           <v-list-item>
@@ -58,7 +81,8 @@
     </v-navigation-drawer>
     <v-carousel
     cycle
-    height="700"
+    height="689"
+    width="auto"
     hide-delimiter-background
     show-arrows-on-hover
   >
@@ -97,6 +121,7 @@
 
 <script>
   export default {
+    name:'Home-view',
     data () {
       return {
         colors: [
@@ -112,6 +137,11 @@
           {
             src: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
           },
+          {
+            src:'https://images.pexels.com/photos/54455/cook-food-kitchen-eat-54455.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+          },{
+            src:'https://images.pexels.com/photos/1128678/pexels-photo-1128678.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+          }
           
             
         ],
@@ -121,8 +151,20 @@
     
       }
     },
+    
     methods:{
+      Signout(){
+        localStorage.clear();
+        this.$router.push({name:'Login'})
+        console.warn("Logged out")
+      }
       
+    },
+    mounted() {
+      const user = localStorage.getItem("user-details");
+      if (user) {
+        this.$router.push({ name: "Login" });
+      }
     }
     
   }

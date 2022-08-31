@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 import SignUp from '@/components/SignUp.vue'
 import Login from '@/components/Login.vue'
 import Home from '@/components/Home-view.vue'
+import Menu from '@/components/Menu-view.vue'
+
 
 Vue.use(VueRouter)
 
@@ -23,6 +25,12 @@ const routes = [
     component:Home
 
   },
+  {
+    name:'Menu',
+    path:'/Menu',
+    component:Menu
+  },
+ 
   {
     path: '/about',
     name: 'about',
