@@ -17,7 +17,7 @@
           <v-btn  
             width="1in" 
             class="mx-4"
-            flat
+            
             >
               <v-badge right color="red">
                 <span slot="badge">6</span>
@@ -81,7 +81,7 @@
     </v-navigation-drawer>
     <v-carousel
     cycle
-    height="689"
+    height="100vh"
     width="auto"
     hide-delimiter-background
     show-arrows-on-hover
@@ -89,14 +89,14 @@
     <template v-slot:prev="{ on, attrs }">
       <v-btn
         color="success"
-        v-bind="attrs"
+        v-bind="!attrs"
         v-on="on"
       >Previous slide</v-btn>
     </template>
     <template v-slot:next="{ on, attrs }">
       <v-btn
         color="info"
-        v-bind="attrs"
+        v-bind="!attrs"
         v-on="on"
       >Next slide</v-btn>
     
@@ -107,13 +107,37 @@
       :src="item.src"
       reverse-transition="fade-transition"
       transition="fade-transition"
-      height="700"
+      height="100vh"
       width="100%"
     ></v-carousel-item>
+   
   </v-carousel>
+  <v-card
+    tile
+    flat
+    rounded="lg"
+    class="pa-md-10 pa-5 text-center"
+    color="surface"
+  >
+    <h2 class="text-md-h6 font-weight-bold">Karibu Blitz Chakula</h2>
+    <p class="text-md-body-2 mt-5">Follow us On</p>
+    <div class="text-center">
+      <v-btn
+        color="surface"
+        class="mr-2"
+        v-for="(b, i) in sm"
+        :key="`sm${i}`"
+        fab
+        depressed
+      >
+        <v-icon>{{ b.icon }}</v-icon>
+      </v-btn>
+    </div>
+    <br />
+  </v-card>
   </v-card>
   
-
+  
  
 
 </v-app>
@@ -124,13 +148,13 @@
     name:'Home-view',
     data () {
       return {
-        colors: [
-          'indigo',
-          'warning',
-          'pink darken-2',
-          'red lighten-1',
-          'deep-purple accent-4',
-        ],items: [
+        sm: [
+        { icon: "mdi-facebook", link: "#" },
+        { icon: "mdi-twitter", link: "#" },
+        { icon: "mdi-instagram", link: "#" },
+        { icon: "mdi-youtube", link: "#" },
+      ],
+        items: [
           {
             src: 'https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
           },
