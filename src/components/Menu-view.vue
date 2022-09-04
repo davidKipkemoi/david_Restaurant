@@ -14,6 +14,17 @@
         
         <v-toolbar-title> Blitz Food</v-toolbar-title>
              <v-spacer></v-spacer>
+             <v-btn  
+            width="1in" 
+            class="mx-4"
+            
+            >
+              <v-badge right color="red">
+                <span slot="badge">6</span>
+                  <v-icon>mdi-cart</v-icon> Cart
+
+              </v-badge>
+          </v-btn>
           
             <v-btn >Sign OUt</v-btn>
       
@@ -86,7 +97,7 @@
               <v-list-item
                 link
                 v-for="(c, i) in categories"
-                :key="`category${i}`"
+                :key="`categories${i}`"
               >
                 <v-list-item-avatar>
                   <v-img :src="c.image"></v-img>
@@ -177,7 +188,7 @@
       },
       mounted() {
         const user = localStorage.getItem("user-details");
-        if (user) {
+        if (!user) {
           this.$router.push({ name: "Login" });
         }
       }

@@ -40,8 +40,8 @@
     },
     mounted() {
       const user = localStorage.getItem("user-details");
-      if (user) {
-        this.$router.push({ name: "Home" });
+      if (!user) {
+        this.$router.push({ name: "Login" });
       }
     }
   }

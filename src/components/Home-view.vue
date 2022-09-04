@@ -186,7 +186,7 @@
     },
     mounted() {
       const user = localStorage.getItem("user-details");
-      if (user) {
+      if (!user) {
         this.$router.push({ name: "Login" });
       }
     }

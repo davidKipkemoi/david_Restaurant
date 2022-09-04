@@ -41,7 +41,7 @@ export default {
   mounted() {
     const user = localStorage.getItem("user-details");
     if (user) {
-      this.$router.push({ name: "Home" });
+      this.$router.push({ name: "Login" });
     }
   },
 };
