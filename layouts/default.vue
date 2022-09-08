@@ -2,7 +2,7 @@
   <v-app dark>
 
     <v-main>
-      <v-container>
+      <v-container fluid style="height: 100vh " >
 
 
         <Nuxt />

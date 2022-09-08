@@ -116,7 +116,8 @@
             <v-row>
               <template v-for="(p, i) in filteredProducts">
                 <v-col cols="12" md="6" :key="`products${p.id}-${i}`">
-                  <v-card link color="surface" class="el ma-1 mb-5 mr-5">
+                  <v-card nuxt :to="`/${p.id}`"
+                  link color="surface" class="el ma-1 mb-5 mr-5">
                     <v-img :src="p.image" height="300">
                       <template>
                         <v-row
@@ -124,12 +125,7 @@
                         justify="center"
                         align="center"
                         >
-                          <v-progress-circular
-                          width="2"
-                          size="100"
-                          color="primary"
-                          intermediate
-                          ></v-progress-circular>
+
 
                         </v-row>
                       </template>
@@ -197,25 +193,14 @@
 
 
   export default {
-
+      async created(){
+        this.categories= await this.$content("category").fetch();
+        this.products=  await this.$content("products").fetch();
+       },
 
     data () {
       return {
-        items: [
-          {
-            src: 'https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-          },
-          {
-            src: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-          },
-          {
-            src:'https://images.pexels.com/photos/54455/cook-food-kitchen-eat-54455.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-          },{
-            src:'https://images.pexels.com/photos/1128678/pexels-photo-1128678.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-          }
 
-
-        ],
 //         categories:[
 //           {
 //     "id": 1,
@@ -315,13 +300,13 @@ sm: [
         localStorage.clear();
         this.$router.push({name:'Login'})
         console.warn("Logged out")
-      },
-      mounted() {
-      const user = localStorage.getItem("user-details");
-      if (!user) {
-        this.$router.push({ name: "Login" });
       }
-    }
+    //   mounted() {
+    //   const user = localStorage.getItem("user-details");
+    //   if (!user) {
+    //     this.$router.push({ name: "Login" });
+    //   }
+    // }
     },
     computed:{
       filteredProducts(){

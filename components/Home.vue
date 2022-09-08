@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app class="">
     <v-card
     class="mx-auto overflow-hidden"
     height="100%"
