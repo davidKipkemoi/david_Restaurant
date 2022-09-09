@@ -1,4 +1,5 @@
 <template>
+
 <div >
   <v-container v-if="product">
     <v-row justify="center">
@@ -33,20 +34,45 @@
           <p class="mt-5 mb-7">
             {{product.description}}
           </p>
-          <v-btn
+          <v-btn @click="$store.commit('cart/AddToCart', product )"
           min-height="45"
           min-width="170"
           class="text-capitalize"
           color="primary"
 
           >Add To Cart</v-btn>
+
       </v-col>
     </v-row>
+    <v-card
+    tile
+    flat
+    rounded="lg"
+    class="pa-md-10 pa-5 text-center"
+    color="surface"
+  >
+    <h2 class="text-md-h6 font-weight-bold">Karibu Blitz Chakula</h2>
+    <p class="text-md-body-2 mt-5">Follow us On</p>
+    <div class="text-center">
+      <v-btn
+        color="surface"
+        class="mr-2"
+        v-for="(b, i) in sm"
+        :key="`sm${i}`"
+        fab
+        depressed
+      >
+        <v-icon>{{ b.icon }}</v-icon>
+      </v-btn>
+    </div>
+    <br />
+  </v-card>
   </v-container>
 
 </div>
 </template>
 <script>
+
 
 export default{
 async created (){
@@ -58,9 +84,20 @@ async created (){
 },
 data(){
   return{
+    sm: [
+        { icon: "mdi-facebook", link: "#" },
+        { icon: "mdi-twitter", link: "#" },
+        { icon: "mdi-instagram", link: "#" },
+        { icon: "mdi-youtube", link: "#" },
+      ],
     product:null,
   };
+
+
+
 },
+
+
 };
 
 </script>

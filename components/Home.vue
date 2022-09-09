@@ -1,5 +1,5 @@
 <template>
-  <v-app class="">
+  <v-app>
     <v-card
     class="mx-auto overflow-hidden"
     height="100%"
@@ -14,20 +14,24 @@
 
       <v-toolbar-title> Blitz Food</v-toolbar-title>
         <v-spacer></v-spacer>
-          <v-btn
-            width="1in"
-            class="mx-4"
 
-            >
-              <v-badge right color="red">
-                <span slot="badge">6</span>
-                  <v-icon>mdi-cart</v-icon> Cart
-
-              </v-badge>
-          </v-btn>
+          <v-badge
+          mx-3
+          v-if="$store.state.cart.cart.length > 0"
+          overlap
+          :content="`${$store.state.cart.cart.length}`"
+        >
+        <v-btn nuxt to="/cart" icon>
+          <v-icon size="40">mdi-cart-outline</v-icon>
+        </v-btn>
+      </v-badge>
+      <v-btn v-else nuxt to="/cart" icon>
+        <v-icon size="40">mdi-cart-outline</v-icon>
+      </v-btn>
 
           <v-btn
              width="1in"
+             ml-12
             @click="Signout"
             >Sign OUt</v-btn>
 

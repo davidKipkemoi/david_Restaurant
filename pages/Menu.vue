@@ -14,19 +14,23 @@
 
       <v-toolbar-title> Blitz Food</v-toolbar-title>
            <v-spacer></v-spacer>
-           <v-btn
-          width="1in"
-          class="mx-4"
-
-          >
-            <v-badge right color="red">
-              <span slot="badge">6</span>
-                <v-icon>mdi-cart</v-icon> Cart
-
-            </v-badge>
+           <v-btn mx-1>
+           <v-badge
+        v-if="$store.state.cart.cart.length > 0"
+        overlap
+        :content="`${$store.state.cart.cart.length}`"
+      >
+        <v-btn nuxt to="/cart" icon>
+          <v-icon size="20">mdi-cart-outline</v-icon>
         </v-btn>
+      </v-badge>
+      <v-btn v-else nuxt to="/cart" icon>
+        <v-icon size="40">mdi-cart-outline</v-icon>
+      </v-btn>
+    </v-btn>
 
-          <v-btn >Sign OUt</v-btn>
+          <v-btn
+          >Sign OUt</v-btn>
 
 
     </v-app-bar>
@@ -134,7 +138,7 @@
                     <v-card-title  class="text-md-body-1 font-weight-bold">
                        {{p.name}}</v-card-title>
                     <v-card-subtitle class="primary--text pb-3">
-                      {{p.price}}
+                      {{$formartMoney(p.price) }}
                     </v-card-subtitle>
                     <v-card-text>
                       <v-chip
