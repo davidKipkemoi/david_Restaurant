@@ -64,7 +64,7 @@
             <v-list-item-title>Menu</v-list-item-title>
           </v-list-item>
 
-          <v-list-item router-link to="">
+          <v-list-item router-link to="/cart">
             <v-list-item-icon >
               <v-icon >mdi-cart</v-icon>
             </v-list-item-icon>
