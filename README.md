@@ -1,4 +1,9 @@
 # Restaurant
+##This is e-food application called blitz food || blitz chakula.
+
+##User orders food from the Menu bar and adds to the cart.
+
+##User then can checkout the items added to cart and pay via credit card.
 
 ## Build Setup
 

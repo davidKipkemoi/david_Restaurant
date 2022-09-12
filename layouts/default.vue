@@ -1,10 +1,7 @@
 <template>
-  <v-app dark>
-
+  <v-app light>
     <v-main>
-      <v-container fluid style="height: 100vh " >
-
-
+      <v-container fluid style="height: 100vh ">
         <Nuxt />
       </v-container>
     </v-main>
@@ -15,6 +12,6 @@
 <script>
 
 export default {
-    name: "DefaultLayout",
+  name: "DefaultLayout",
 }
 </script>

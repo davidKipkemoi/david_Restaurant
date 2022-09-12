@@ -14,7 +14,7 @@
 
       <v-toolbar-title> Blitz Food</v-toolbar-title>
            <v-spacer></v-spacer>
-           <v-btn mx-1>
+
            <v-badge
         v-if="$store.state.cart.cart.length > 0"
         overlap
@@ -24,10 +24,10 @@
           <v-icon size="20">mdi-cart-outline</v-icon>
         </v-btn>
       </v-badge>
-      <v-btn v-else nuxt to="/cart" icon>
+      <v-btn  v-else nuxt to="/cart" icon>
         <v-icon size="40">mdi-cart-outline</v-icon>
       </v-btn>
-    </v-btn>
+
 
           <v-btn
           >Sign OUt</v-btn>

@@ -104,3 +104,13 @@
   </v-card>
   </v-card>
 </template>
+<script>
+  export default{
+    data(){
+      return{
+        drawer:null,
+        group:null
+      }
+    }
+  }
+</script>

@@ -1,9 +1,10 @@
 <template>
-  <v-app>
+  <v-app >
     <v-card
     class="mx-auto overflow-hidden"
     height="100%"
     width="100%"
+
 
   >
     <v-app-bar
@@ -86,7 +87,7 @@
     <div>
 
 <div class="text-center" v-if="$store.state.cart.cart.length == 0">
-  <v-img class="d-block mx-auto" src="@/assets/blitz.jpg" width="500"></v-img>
+  <v-img class="d-block mx-auto" src="/blitz.jpg" width="400"></v-img>
   <p>Select Items from Menu to Add to Cart</p>
 </div>
 <v-container>
@@ -142,7 +143,10 @@
       </v-col>
 
     </template>
-    <div class="mb-3" v-if="$store.state.cart.cart.length > 0">
+
+
+  </v-row>
+  <div class="mt-6" v-if="$store.state.cart.cart.length > 0">
     <v-btn
       nuxt
       to="/checkout"
@@ -152,9 +156,6 @@
       >Checkout</v-btn
     >
   </div>
-
-  </v-row>
-
 </v-container>
 
 
