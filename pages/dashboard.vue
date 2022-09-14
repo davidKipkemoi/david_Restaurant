@@ -86,11 +86,12 @@
     </v-navigation-drawer>
     <v-row dense>
   <v-col md="6">
-
-      <apexchart width="500" type="line" :options="options" :series="series"></apexchart>
+      <h1>Sales</h1>
+      <apexchart id="apex1" width="500" type="line" :options="options" :series="series"></apexchart>
 
   </v-col>
   <v-col md="6">
+    <h1 justify="center">Sales</h1>
     <apexchart width="500" type="bar" :options="options" :series="series"></apexchart>
   </v-col>
   <v-col md="6">
@@ -134,10 +135,10 @@ export default{
       drawer:null,
       options: {
         chart: {
-          id: 'vuechart-example'
+          id:'apex1'
         },
         xaxis: {
-          categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998]
+          categories: ["Jan", "Feb","Mar", "Apr"," May"," Jun"," Jul"," Aug"]
         }
       },
       series: [{
@@ -145,5 +146,9 @@ export default{
         data: [30, 40, 45, 50, 49, 60, 70, 91]
       }]
     }
-}}
+},
+methods:{
+
+}
+}
 </script>

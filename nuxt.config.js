@@ -47,6 +47,7 @@ export default {
     '@nuxt/content',
     'vue-sweetalert2/nuxt/no-css',
     'nuxt-webfontloader',
+    '@nuxtjs/axios'
 
 
 
