@@ -26,7 +26,8 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['~/plugins/cart.js'],
+  plugins: ['~/plugins/cart.js','~/plugins/vue-apexcharts.js'],
+
 
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -46,6 +47,10 @@ export default {
     '@nuxt/content',
     'vue-sweetalert2/nuxt/no-css',
     'nuxt-webfontloader',
+
+
+
+
   ],
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa

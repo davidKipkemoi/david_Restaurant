@@ -1,4 +1,5 @@
 <template>
+
   <v-app>
     <v-card
     class="mx-auto overflow-hidden"
@@ -83,39 +84,19 @@
       </v-list>
 
     </v-navigation-drawer>
-    <v-carousel
-    cycle
-    height="100vh"
-    width="auto"
-    hide-delimiter-background
-    show-arrows-on-hover
-  >
-    <template v-slot:prev="{ on, attrs }">
-      <v-btn
-        color="success"
-        v-bind="!attrs"
-        v-on="on"
-      >Previous slide</v-btn>
-    </template>
-    <template v-slot:next="{ on, attrs }">
-      <v-btn
-        color="info"
-        v-bind="!attrs"
-        v-on="on"
-      >Next slide</v-btn>
+    <v-row dense>
+  <v-col md="6">
 
-    </template>
-    <v-carousel-item
-      v-for="(item,i) in items"
-      :key="i"
-      :src="item.src"
-      reverse-transition="fade-transition"
-      transition="fade-transition"
-      height="100vh"
-      width="100%"
-    ></v-carousel-item>
+      <apexchart width="500" type="line" :options="options" :series="series"></apexchart>
 
-  </v-carousel>
+  </v-col>
+  <v-col md="6">
+    <apexchart width="500" type="bar" :options="options" :series="series"></apexchart>
+  </v-col>
+  <v-col md="6">
+    <apexchart width="500" type="histogram" :options="options" :series="series"></apexchart>
+  </v-col>
+ </v-row>
   <v-card
     tile
     flat
@@ -146,57 +127,23 @@
 
 </v-app>
 </template>
-
 <script>
-  export default {
-    name:'Home',
-    data () {
-      return {
-        sm: [
-        { icon: "mdi-facebook", link: "#" },
-        { icon: "mdi-twitter", link: "#" },
-        { icon: "mdi-instagram", link: "#" },
-        { icon: "mdi-youtube", link: "#" },
-      ],
-        items: [
-          {
-            src: 'https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-          },
-          {
-            src: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-          },
-          {
-            src:'https://images.pexels.com/photos/54455/cook-food-kitchen-eat-54455.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-          },{
-            src:'https://images.pexels.com/photos/1128678/pexels-photo-1128678.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-          }
-
-
-        ],
-
-        drawer: false,
-      group: null,
-
-      }
-    },
-
-    methods:{
-      Signout(){
-        localStorage.clear();
-        this.$router.push({name:'Menu'})
-        console.warn("Logged out")
-      }
-
+export default{
+  data: function() {
+    return {
+      drawer:null,
+      options: {
+        chart: {
+          id: 'vuechart-example'
+        },
+        xaxis: {
+          categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998]
+        }
+      },
+      series: [{
+        name: 'series-1',
+        data: [30, 40, 45, 50, 49, 60, 70, 91]
+      }]
     }
-    // mounted() {
-    //   const user = localStorage.getItem("user-details");
-    //   if (!user) {
-    //     this.$router.push({ name: "Home" });
-    //   }
-    // }
-
-  }
+}}
 </script>
-<style>
-
-</style>

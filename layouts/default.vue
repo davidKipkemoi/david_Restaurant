@@ -7,9 +7,7 @@
     </v-main>
 
   </v-app>
-</template>
-
-<script>
+</template><script>
 
 export default {
   name: "DefaultLayout",
