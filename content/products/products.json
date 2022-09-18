@@ -5,7 +5,7 @@
     "onSale": false,
     "tags": ["Breakfast", "English"],
     "image": "https://images.pexels.com/photos/101533/pexels-photo-101533.jpeg?auto=compress&cs=tinysrgb&w=600  ",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, possimus temporibus reprehenderit molestiae, doloribus eos obcaecati expedita, voluptatibus commodi  suscipit aliquid fuga modi alias fugiat nostrum. Accusantium incidunt quae modi",
+    "description": "Sometimes called a fry up, a full English is a hearty, hefty breakfast plate served in the UK and Ireland. Full English breakfasts are so popular that they’re pretty much offered throughout the day as all-day breakfast. Full English breakfasts contain: sausages, back bacon, eggs, tomatoes, mushrooms, fried bread, and beans",
     "price": 2000,
     "salePrice": null,
     "ratings": 4.0
@@ -16,7 +16,7 @@
     "onSale": true,
     "tags": ["Breakfast", "Kenyan"],
     "image": "https://images.pexels.com/photos/2105104/pexels-photo-2105104.jpeg?auto=compress&cs=tinysrgb&w=600",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, possimus temporibus reprehenderit molestiae, doloribus eos obcaecati expedita, voluptatibus commodi  suscipit aliquid fuga modi alias fugiat nostrum. Accusantium incidunt quae modi",
+    "description": "A wise man once said that breakfast is the most............",
     "price": 3500,
     "salePrice": 3000,
     "ratings": 2.6
@@ -27,7 +27,7 @@
     "onSale": true,
     "tags": ["Lunch", "BBQ"],
     "image": "https://images.pexels.com/photos/410648/pexels-photo-410648.jpeg?auto=compress&cs=tinysrgb&w=600",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, possimus temporibus reprehenderit molestiae, doloribus eos obcaecati expedita, voluptatibus commodi  suscipit aliquid fuga modi alias fugiat nostrum. Accusantium incidunt quae modi",
+    "description": "Nyama choma is Kenya's unofficial national dish, meaning barbecued meat in the Swahili language. The meat is usually goat or beef, served roasted throughout the country, from roadside shacks to fine restaurants. It is often paired with local beer and side dishes such as ugali.",
     "price": 10500,
     "salePrice": 9000,
     "ratings": 4.5
@@ -38,7 +38,7 @@
     "onSale": false,
     "tags": ["Dinner", "KE-wine"],
     "image": "https://images.pexels.com/photos/1479706/pexels-photo-1479706.jpeg?auto=compress&cs=tinysrgb&w=600",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, possimus temporibus reprehenderit molestiae, doloribus eos obcaecati expedita, voluptatibus commodi  suscipit aliquid fuga modi alias fugiat nostrum. Accusantium incidunt quae modi",
+    "description": "Accept what life offers you and try to drink from every cup. All wines should be tasted; some should only be sipped, but with others, drink the whole bottle.",
     "price": 10500,
     "salePrice": null,
     "ratings": 1.8
@@ -49,7 +49,7 @@
     "onSale": true,
     "tags": ["Dessert", "Pizza"],
     "image": "https://images.pexels.com/photos/2180877/pexels-photo-2180877.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, possimus temporibus reprehenderit molestiae, doloribus eos obcaecati expedita, voluptatibus commodi  suscipit aliquid fuga modi alias fugiat nostrum. Accusantium incidunt quae modi",
+    "description": "Never sit around and wait for someone unless they're delivering a pizza. BlitzFood delivers.",
     "price": 5500,
     "salePrice": 40000,
     "ratings": 3.5
