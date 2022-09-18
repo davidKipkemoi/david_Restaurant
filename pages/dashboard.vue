@@ -52,7 +52,7 @@
         <v-list-item-group
           v-model="group"
           active-class="deep-purple--text text--accent-4">
-          <v-list-item router-link to="/">
+          <v-list-item router-link to="Home">
             <v-list-item-icon>
               <v-icon>mdi-home</v-icon>
             </v-list-item-icon>
@@ -87,8 +87,7 @@
     <v-row dense>
   <v-col md="6">
       <h1>Sales</h1>
-      <apexchart id="apex1" width="500" type="line" :options="options" :series="series"></apexchart>
-
+      <apexchart id="apex3" width="500" type="line" :options="options" :series="series"></apexchart>
   </v-col>
   <v-col md="6">
     <h1 justify="center">Sales</h1>
@@ -134,8 +133,7 @@ export default{
     return {
       drawer:null,
       options: {
-        chart: {
-          id:'apex1'
+        chartsss: {
         },
         xaxis: {
           categories: ["Jan", "Feb","Mar", "Apr"," May"," Jun"," Jul"," Aug"]

@@ -27,9 +27,8 @@
       <v-btn  v-else nuxt to="/cart" icon>
         <v-icon size="40">mdi-cart-outline</v-icon>
       </v-btn>
-
-
           <v-btn
+          @click="Signout"
           >Sign OUt</v-btn>
 
 
@@ -50,7 +49,7 @@
           v-model="group"
           active-class="deep-purple--text text--accent-4">
 
-          <v-list-item router-link to="/">
+          <v-list-item router-link to="Home">
             <v-list-item-icon>
               <v-icon>mdi-home</v-icon>
             </v-list-item-icon>
@@ -71,7 +70,7 @@
             <v-list-item-title>Orders</v-list-item-title>
           </v-list-item>
 
-          <v-list-item>
+          <v-list-item router-link to="/dashboard_2">
             <v-list-item-icon>
               <v-icon>mdi-account</v-icon>
             </v-list-item-icon>
@@ -114,7 +113,6 @@
             </v-list-item>
           </v-list>
           </div>
-
         </v-col>
           <v-col md="9">
             <v-row>
@@ -128,10 +126,7 @@
                         class="fill=height"
                         justify="center"
                         align="center"
-                        >
-
-
-                        </v-row>
+                        ></v-row>
                       </template>
 
                     </v-img>
@@ -156,8 +151,6 @@
                 </v-col>
               </template>
             </v-row>
-
-
           </v-col>
       </v-row>
     </v-container>
@@ -186,16 +179,10 @@
   </div>
   <br />
 </v-card>
-
-
-
 </v-app>
 </template>
 
 <script>
-
-
-
   export default {
       async created(){
         this.categories= await this.$content("category").fetch();
@@ -205,85 +192,7 @@
     data () {
       return {
 
-//         categories:[
-//           {
-//     "id": 1,
-//     "name": "Shoes",
-//     "image": "https://images.pexels.com/photos/19090/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-//   },
-//   {
-//     "id": 2,
-//     "name": "Handbags",
-//     "image": "https://images.pexels.com/photos/45981/pexels-photo-45981.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-//   },
-//   {
-//     "id": 3,
-//     "name": "Perfumes",
-//     "image": "https://images.pexels.com/photos/965989/pexels-photo-965989.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-//   },
-//   {
-//     "id": 4,
-//     "name": "Cosmetics",
-//     "image": "https://images.pexels.com/photos/1377034/pexels-photo-1377034.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-//   }
-//         ],
-//           products:[
-//   {
-//     "id": 1,
-//     "name": "Silky Smooth Beats",
-//     "onSale": false,
-//     "tags": ["Headphone", "People"],
-//     "image": "https://images.pexels.com/photos/577769/pexels-photo-577769.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-//     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, possimus temporibus reprehenderit molestiae, doloribus eos obcaecati expedita, voluptatibus commodi  suscipit aliquid fuga modi alias fugiat nostrum. Accusantium incidunt quae modi",
-//     "price": 20000,
-//     "salePrice": null,
-//     "ratings": 4.0
-//   },
-//   {
-//     "id": 2,
-//     "name": "Lady Luck Is Smiling",
-//     "onSale": true,
-//     "tags": ["Perfume", "Women"],
-//     "image": "https://images.pexels.com/photos/6062560/pexels-photo-6062560.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-//     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, possimus temporibus reprehenderit molestiae, doloribus eos obcaecati expedita, voluptatibus commodi  suscipit aliquid fuga modi alias fugiat nostrum. Accusantium incidunt quae modi",
-//     "price": 3500,
-//     "salePrice": 3000,
-//     "ratings": 4.5
-//   },
-//   {
-//     "id": 3,
-//     "name": "Green Nike Zoom",
-//     "onSale": true,
-//     "tags": ["Nike", "Men"],
-//     "image": "https://images.pexels.com/photos/1456706/pexels-photo-1456706.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-//     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, possimus temporibus reprehenderit molestiae, doloribus eos obcaecati expedita, voluptatibus commodi  suscipit aliquid fuga modi alias fugiat nostrum. Accusantium incidunt quae modi",
-//     "price": 10500,
-//     "salePrice": 9000,
-//     "ratings": 4.5
-//   },
-//   {
-//     "id": 4,
-//     "name": "New Home Living Room Set",
-//     "onSale": false,
-//     "tags": ["Home", "Pretty"],
-//     "image": "https://images.pexels.com/photos/1571459/pexels-photo-1571459.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-//     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, possimus temporibus reprehenderit molestiae, doloribus eos obcaecati expedita, voluptatibus commodi  suscipit aliquid fuga modi alias fugiat nostrum. Accusantium incidunt quae modi",
-//     "price": 100500,
-//     "salePrice": null,
-//     "ratings": 4
-//   },
-//   {
-//     "id": 5,
-//     "name": "Classic Man Watch",
-//     "onSale": true,
-//     "tags": ["Watch", "Men"],
-//     "image": "https://images.pexels.com/photos/3210711/pexels-photo-3210711.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-//     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, possimus temporibus reprehenderit molestiae, doloribus eos obcaecati expedita, voluptatibus commodi  suscipit aliquid fuga modi alias fugiat nostrum. Accusantium incidunt quae modi",
-//     "price": 50500,
-//     "salePrice": 40000,
-//     "ratings": 3.5
-//   }
-// ],
+
 sm: [
       { icon: "mdi-facebook", link: "#" },
       { icon: "mdi-twitter", link: "#" },

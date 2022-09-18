@@ -26,7 +26,7 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['~/plugins/cart.js','~/plugins/vue-apexcharts.js'],
+  plugins: ['~/plugins/cart.js','~/plugins/vue-apexcharts.js', '~/plugins/vue-chart.js'],
 
 
 
@@ -48,6 +48,7 @@ export default {
     'vue-sweetalert2/nuxt/no-css',
     'nuxt-webfontloader',
     '@nuxtjs/axios'
+
 
 
 
