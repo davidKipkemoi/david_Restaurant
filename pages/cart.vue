@@ -87,7 +87,7 @@
     <div>
 
 <div class="text-center" v-if="$store.state.cart.cart.length == 0">
-  <v-img class="d-block mx-auto" src="/blitz.jpg" width="400"></v-img>
+  <v-img class="d-block mx-auto" src="/emptycart.svg" width="400"></v-img>
   <p>Select Items from Menu to Add to Cart</p>
 </div>
 <v-container>
