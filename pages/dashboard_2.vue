@@ -171,7 +171,7 @@ export default{
         };
     },
     async created() {
-        const { data } = await axios.get("http://localhost:3000/products");
+      const data=  await this.$content("products").fetch();
         data.forEach(d => {
           const date =  moment(d.date,'YYYYMMDD').format("MM/DD");
             const { name,
