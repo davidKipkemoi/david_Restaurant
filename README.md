@@ -4,6 +4,7 @@
 ##User orders food from the Menu bar and adds to the cart.
 
 ##User then can checkout the items added to cart and pay via credit card.
+## M-pesa intergration ongoing.
 
 ## Build Setup
 
