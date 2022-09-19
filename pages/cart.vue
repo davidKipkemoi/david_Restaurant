@@ -199,6 +199,12 @@
 export default {
 data (){
   return{
+    sm: [
+        { icon: "mdi-facebook", link: "#" },
+        { icon: "mdi-twitter", link: "#" },
+        { icon: "mdi-instagram", link: "#" },
+        { icon: "mdi-youtube", link: "#" },
+      ],
     drawer:null,
     group:null
    }
